@@ -77,18 +77,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' href='./css/login.css'>
   <link rel='stylesheet' href='./css/main.css'>
-  <title>Login</title>
+  <link rel='stylesheet' href='./css/floatingbg.css'>
+  <title>PETSHOP | Login</title>
 </head>
 <body>
-  <form action="login.php" method ="post">
-    <h2>admin login</h2>
-    <?php echo $error; ?>
-    <br>
-    <label>username (admin)</label>
-    <input type="text" name="username" placeholder="admin"><br>
-    <label>password (admin)</label>
-    <input type="password" name="password" placeholder="*****"><br> 
-    <input type="submit" value="login">
-  </form>
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form action="login.php" method ="post" class="login">
+			<div class = "h2-login"> 
+			<h3> PETSHOP <br>Admin Log In </h3>
+			</div>
+        <?php echo $error; ?>
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" name = "username" class="login__input" placeholder="username admin">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" name= "password" class="login__input" placeholder="password admin">
+				</div>
+
+					<label class = "form-style-2"> 
+						<span> <input type = "submit" value = "Log In"> </span>
+					</label>
+				</button>				
+			</form>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+
+	<div class="waveWrapper waveAnimation">
+		<div class="waveWrapperInner bgTop">
+		  <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+		</div>
+		<div class="waveWrapperInner bgMiddle">
+		  <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+		</div>
+		<div class="waveWrapperInner bgBottom">
+		  <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+		</div>
+	  </div><div class="waveWrapper waveAnimation">
+		<div class="waveWrapperInner bgTop">
+		  <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+		</div>
+		<div class="waveWrapperInner bgMiddle">
+		  <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+		</div>
+		<div class="waveWrapperInner bgBottom">
+		  <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+		</div>
+	  </div>
+
+</div>
+
 </body>
 </html>
